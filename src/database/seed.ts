@@ -11,6 +11,9 @@ await seed(drizzleDB, schema).refine((faker) => {
             columns: {
                 name: faker.companyName(),
                 description: faker.loremIpsum(),
+            },
+            with: {
+                questions: 5,
             }
         }
     }
